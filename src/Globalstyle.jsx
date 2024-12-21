@@ -8,10 +8,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing : border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
     
 body {
-    background-color: red;
+    color:#6c7983;
+    font-size:1rem;
 }`;
 export default GlobalStyle;

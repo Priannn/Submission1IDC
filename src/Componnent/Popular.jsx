@@ -44,6 +44,7 @@ const PopularStyled = styled.div`
     }
     a img {
       width: 100%;
+      height: 300px;
       object-fit: cover;
       border-radius: 7px;
     }
