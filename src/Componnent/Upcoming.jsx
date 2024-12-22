@@ -3,10 +3,10 @@ import { useGlobalContext } from "../Context/global";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Popular({ rendered }) {
-  const { popularAnime, isSearch, searchResult } = useGlobalContext();
+export default function Upcoming({ rendered }) {
+  const { upComingAnime, isSearch, searchResult } = useGlobalContext();
     const conditionalRendering = () => {
-      if (!isSearch && rendered === "popular") {
+      if (!isSearch && rendered === "upcoming") {
         return popularAnime?.length ? (
           popularAnime.map((anime) => (
             <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
@@ -32,14 +32,14 @@ export default function Popular({ rendered }) {
   return (
     <>
       <PopularStyled>
-        <div className="popular-anime">{conditionalRendering()}</div>
+        <div className="upcoming-anime">{conditionalRendering()}</div>
       </PopularStyled>
     </>
   );
 }
 const PopularStyled = styled.div`
   display: flex;
-  .popular-anime {
+  .upcoming-anime {
     display: flex;
     margin-top: 2rem;
     padding-top: 2rem;
