@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Upcoming({ rendered }) {
-  const { upComingAnime, isSearch, searchResult } = useGlobalContext();
+  const { upcomingAnime, isSearch, searchResult } = useGlobalContext();
     const conditionalRendering = () => {
       if (!isSearch && rendered === "upcoming") {
-        return popularAnime?.length ? (
-          popularAnime.map((anime) => (
+        return upcomingAnime?.length ? (
+            upcomingAnime.map((anime) => (
             <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
               <img src={anime.images.jpg.large_image_url} alt={anime.title} />
             </Link>
           ))
         ) : (
-          <p>Loading popular anime...</p>
+          <p>Loading Up Coming Anime...</p>
         );
       } else {
         return searchResult?.length ? (

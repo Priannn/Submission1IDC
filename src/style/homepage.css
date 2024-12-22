@@ -1,0 +1,68 @@
+body {
+  background-color: #ededed;
+}
+
+header {
+  padding: 2rem 5rem;
+  width: 60%;
+  margin: 0 auto;
+  transition: all 0.4s ease-in-out;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+header .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+header .search-container button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-family: "Nunito", sans-serif;
+  border: 5px solid #e5e7eb;
+}
+
+header .search-container form {
+  position: relative;
+  width: 100%;
+}
+
+header .search-container .input-control {
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+header .search-container .input-control input {
+  width: 400px;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+  border: 5px solid #e5e7eb;
+}
+
+header .search-container .input-control button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
