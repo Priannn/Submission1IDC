@@ -115,16 +115,17 @@ export const Animeitem = () => {
         </div>
         <h3 className="title">Trailer</h3>
         <div className="trailer-container">
-          {trailer?.embed_url && (
+          {trailer?.embed_url ? 
             <iframe
               src={trailer.embed_url}
               title={title}
               width="700"
               height="450"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          )}
+              allowFullScreen>
+            </iframe> :
+            <h3>Trailer not found</h3>
+          }
         </div>
         <h3 className="title">Character</h3>
         <div className="characters">
@@ -132,6 +133,7 @@ export const Animeitem = () => {
             const { role } = character;
             const { images, name, mal_id } = character.character;
             console.log(images);
+        
 
             return (
               <Link to={`/character/${mal_id}`} key={index}>

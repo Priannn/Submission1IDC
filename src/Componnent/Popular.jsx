@@ -2,6 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../Context/global";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Sidebar } from "./Sidebar";
 
 export default function Popular({ rendered }) {
   const { popularAnime, isSearch, searchResult } = useGlobalContext();
@@ -33,6 +34,7 @@ export default function Popular({ rendered }) {
     <>
       <PopularStyled>
         <div className="popular-anime">{conditionalRendering()}</div>
+        <Sidebar />
       </PopularStyled>
     </>
   );
