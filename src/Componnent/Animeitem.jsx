@@ -160,7 +160,7 @@ const AnimeitemStyled = styled.div`
     font-size: 3rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
-    background: linear-gradient(to right, #a855f7, #27ae60);
+    background: linear-gradient(to right, #1C325B , #FCC737);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.4s ease-in-out;
@@ -173,7 +173,7 @@ const AnimeitemStyled = styled.div`
     margin: 3rem 0;
     font-size: 2rem;
     cursor: pointer;
-    background: linear-gradient(to right, #a855f7, #27ae60);
+    background: linear-gradient(to right, #1C325B , #FCC737);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

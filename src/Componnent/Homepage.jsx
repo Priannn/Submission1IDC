@@ -32,15 +32,8 @@ const Homepage = () => {
   return (
     <HomepageStyled>
       <header>
-        <div className="logo">
-          <h1>
-            {rendered === "popular"
-              ? "Popular Anime"
-              : rendered === "airing"
-              ? "Airing Anime"
-              : "Upcoming Anime"}
-          </h1>
-        </div>
+        <h1 className="headerr">Adpnime</h1>
+
         <div className="search-container">
           <div className="filter-btn popular-filter">
             <button
@@ -63,6 +56,7 @@ const Homepage = () => {
               <button type="submit">Search</button>
             </div>
           </form>
+
           <div className="filter-btn airing-filter">
             <button
               onClick={() => {
@@ -84,6 +78,15 @@ const Homepage = () => {
             </button>
           </div>
         </div>
+        <div className="logo">
+          <h1>
+            {rendered === "popular"
+              ? "Popular Anime"
+              : rendered === "airing"
+              ? "Airing Anime"
+              : "Upcoming Anime"}
+          </h1>
+        </div>
       </header>
       {switchComponent()}
     </HomepageStyled>
@@ -93,6 +96,7 @@ const Homepage = () => {
 const HomepageStyled = styled.div`
     background-color:#FCC737;
     color:#1C325B;
+   
     header{
         padding: 2rem 5rem;
         width: 60%;
@@ -104,10 +108,16 @@ const HomepageStyled = styled.div`
             justify-content: center;
             margin-bottom:2rem;
         }
+             .headerr {
+        text-align: center; /* Memastikan teks berada di tengah */
+        font-size: 2.5rem;
+    }
         .search-container{
             display:flex;
             align-items: center;
             justify-content: center;
+            margin-bottom:1rem;
+            margin-top:1rem;
             gap: 1rem;
             button{
                 display:flex;
