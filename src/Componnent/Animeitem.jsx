@@ -53,6 +53,10 @@ export const Animeitem = () => {
   return (
     <>
       <AnimeitemStyled>
+         <div className="back">
+                <i className="fas fa-arrow-left"></i>
+                <Link to="/">Back to Homepage</Link>
+              </div>
         <h1>{title}</h1>
         <div className="details">
           <div className="detail">
@@ -154,6 +158,20 @@ export const Animeitem = () => {
 const AnimeitemStyled = styled.div`
   padding: 2rem 12rem;
   background-color: #ededed;
+  .back {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    color: #eb5757;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-weight: 600;
+       color: #eb5757;
+    }
+  }
   h1 {
     
     text-align: center;
