@@ -6,6 +6,7 @@ import { Sidebar } from "./Sidebar";
 
 export default function Popular({ rendered }) {
   const { popularAnime, isSearch, searchResult } = useGlobalContext();
+ 
     const conditionalRendering = () => {
       if (!isSearch && rendered === "popular") {
         return popularAnime?.length ? (
